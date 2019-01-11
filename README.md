@@ -1,4 +1,4 @@
-# Pixel Art Maker Project
+# Rock Paper Scissors
 
 ## Table of Contents
 
@@ -7,9 +7,7 @@
 
 ## Instructions
 
-this is a udacity project i am used jquery library and javascript 
-to used it at first enter row number and column number and click the button to draw a table select
-the cell to change the color.
+this is a udacity project i am used javascript 
 
 ## Contributing
 
