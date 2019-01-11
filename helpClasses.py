@@ -21,7 +21,7 @@ class Player:
             my_move (str): 'rock' 'paper' or 'scissors'
             opp_move (str): 'rock' 'paper' or 'scissors'
         """
-        print(f"Your opponent played {opp_move} in the previous round.")
+        print("Your opponent played {opp_move} in the previous round")
         return my_move, opp_move
 
 
@@ -114,14 +114,14 @@ class Game:
         """
         if rnd_winner == 1:
             new_p1_score = prev_p1_score + 1
-            print(f" Score\n {new_p1_score} | {prev_p2_score}\n-----")
+            print(" Score\n {new_p1_score} | {prev_p2_score}\n-----")
             return new_p1_score, prev_p2_score
         elif rnd_winner == 2:
             new_p2_score = prev_p2_score + 1
-            print(f" Score\n {prev_p1_score} | {new_p2_score}\n-----")
+            print(" Score\n {prev_p1_score} | {new_p2_score}\n-----")
             return prev_p1_score, new_p2_score
         else:
-            print(f" Score\n {prev_p1_score} | {prev_p2_score}\n-----")
+            print(" Score\n {prev_p1_score} | {prev_p2_score}\n-----")
             return prev_p1_score, prev_p2_score
 
     def final_score(self, p1_score, p2_score):
@@ -132,7 +132,7 @@ class Game:
         Outputs: Display scoreboard and winner text.
         Purpose: Display the final score for each player in a scoreboard.
         """
-        print(f"\nFinal Score\n  {p1_score} | {p2_score}\n --------")
+        print("\nFinal Score\n  {p1_score} | {p2_score}\n --------")
         if p1_score > p2_score:
             print('Congratulations to Player 1!')
         if p1_score < p2_score:
@@ -145,12 +145,12 @@ class Game:
         if current_rnd == 1:
             p1_move = self.p1.move('scissors', 'rock')
             p2_move = self.p2.move('scissors', 'rock')
-            print(f"Player 1: {p1_move} \nPlayer 2: {p2_move}\n-----")
+            print("Player 1: {p1_move} \nPlayer 2: {p2_move}\n-----")
             return p1_move, p2_move
         else:
             p1_move = self.p1.move(prev_p1_move, prev_p2_move)
             p2_move = self.p2.move(prev_p1_move, prev_p2_move)
-            print(f"Player 1: {p1_move} \nPlayer 2: {p2_move}\n-----")
+            print("Player 1: {p1_move} \nPlayer 2: {p2_move}\n-----")
             return p1_move, p2_move
 
     def play_match(self):
@@ -168,7 +168,7 @@ class Game:
         prev_p2_move = 'rock'
 
         for round in range(1, rounds+1):  # non-technical counting
-            print(f"\n..........\n Round {round}\n..........\n")
+            print("\n..........\n Round {round}\n..........\n")
             p1_move, p2_move = self.play_round(round, rounds,
                                                prev_p1_move, prev_p2_move)
             winning_p = self.winner(p1_move, p2_move)
